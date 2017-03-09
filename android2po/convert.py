@@ -219,7 +219,7 @@ def get_element_text(tag, name, warnfunc=dummy_warn):
                             # it will ignore leading/trailing whitespace.
                             if not codepoint_str.isalnum():
                                 raise ValueError(codepoint_str)
-                            codepoint = chr(int(codepoint_str, 16))
+                            codepoint = unichr(int(codepoint_str, 16))
                         except ValueError:
                             raise UnsupportedResourceError('bad unicode escape sequence')
 
